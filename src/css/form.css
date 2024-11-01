@@ -39,7 +39,7 @@
   color: #808080;
 }
 
-#submit-btn {
+.submit-btn {
   font-family: inherit;
   border: none;
   color: #fff;
@@ -48,21 +48,19 @@
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.64px;
-  width: 91px;
   height: 40px;
   padding: 8px 16px;
   border-radius: 8px;
-  display: inline-flex;
-  border-radius: 8px;
+  text-align: center;
   background-color: #4e75ff;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-#submit-btn:hover {
+.submit-btn:hover {
   background: #6c8cff;
 }
 
-#submit-btn:disabled {
+.submit-btn:disabled {
   background-color: #cfcfcf;
   color: #989898;
 }
