@@ -31,7 +31,7 @@ async function handleRequest(value, page) {
 
   const markup = drawMarkup(photosArr.hits);
   if (page === 1) outputList.innerHTML = markup;
-  else outputList.innerHTML += markup;
+  else outputList.insertAdjacentHTML('beforeend', markup);
   lightboxGallery.refresh();
 
   if (page * elemsPerPage >= photosArr.totalHits) {
@@ -71,7 +71,7 @@ moreBtn.addEventListener('click', async () => {
     const listElemHeight = document
       .querySelector('.general-list-item')
       .getBoundingClientRect().height;
-    scrollBy({ top: listElemHeight * 2, behavior: 'smooth' });
+    scrollBy({ top: listElemHeight * 2 + 32, behavior: 'smooth' });
   } catch (error) {
     iziToast.info({
       message: error.message,
